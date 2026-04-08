@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Моя 3D модель в AR</title>
-    <!-- Подключаем model-viewer -->
+    <meta charset="utf-8">
+    <!-- Важный тег для мобильных устройств -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f0f0;
-        }
-
         model-viewer {
             width: 100%;
-            height: 100%;
-            background-color: #e0e0e0;
+            height: 100vh; /* Полный экран, чтобы кнопка точно поместилась */
         }
     </style>
 </head>
 <body>
     <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
                   ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
-                  alt="3D модель астронавта"
+                  alt="Астронавт"
                   ar
                   ar-modes="webxr scene-viewer quick-look"
                   camera-controls
-                  auto-rotate
-                  auto-rotate-delay="0"
-                  rotation-per-second="10deg"
-                  environment-image="neutral"
-                  shadow-intensity="1">
+                  auto-rotate>
     </model-viewer>
 </body>
 </html>
