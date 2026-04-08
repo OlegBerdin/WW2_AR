@@ -50,11 +50,13 @@
     <model-viewer id="viewer"
                   src="Models/Soldier4.glb"
                   ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz"
-                  alt="Astronaut"
-                  ar
-                  ar-modes="scene-viewer quick-look webxr"
                   camera-controls
-                  auto-rotate>
+                  touch-action="none"
+                  shadow-intensity="1"
+                  field-of-view="45deg"
+                  min-camera-orbit="auto auto 5%"
+                  camera-orbit="-10deg -45deg 5m"
+                  ar>
     </model-viewer>
 
     <!-- ������ AR -->
